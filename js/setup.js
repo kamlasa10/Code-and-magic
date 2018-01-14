@@ -13,30 +13,30 @@ var wizards = [
   {
     name: getRandom(nameWizards) + ' ' + getRandom(surnameWizards),
     coatColor: getRandom(coatColorArr),
-    eyesColor: getRandom()
+    eyesColor: getRandom(eyesColorArr)
   },
   {
     name: getRandom(nameWizards) + ' ' + getRandom(surnameWizards),
     coatColor: getRandom(coatColorArr),
-    eyesColor: ''
+    eyesColor: getRandom(eyesColorArr)
   },
   {
     name: getRandom(nameWizards) + ' ' + getRandom(surnameWizards),
     coatColor: getRandom(coatColorArr),
-    eyesColor: ''
+    eyesColor: getRandom(eyesColorArr)
   },
   {
     name: getRandom(nameWizards) + ' ' + getRandom(surnameWizards),
     coatColor: getRandom(coatColorArr),
-    eyesColor: ''
+    eyesColor: getRandom(eyesColorArr)
   }
 ];
 function getRandom(arr) {
   var getRandomNum = function (min, max) {
     return Math.random() * (max - min) + min;
   };
-  var randomNum = getRandomNum(0, arr.length - 1);
-  return arr[randomNum];
+  var num = getRandomNum(0, arr.length - 1);
+  return arr[num];
 }
 for(var i = 0; i < wizards.length; i++) {
   var wizardElem = setupSimilarTemplay.querySelector('.setup-similar-item').cloneNode(true);
